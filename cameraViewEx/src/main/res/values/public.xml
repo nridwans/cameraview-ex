@@ -12,23 +12,23 @@
     limitations under the License.
 -->
 <resources>
-    <public name="facing" type="attr" />
-    <public name="aspectRatio" type="attr" />
-    <public name="continuousFrameSize" type="attr" />
-    <public name="singleCaptureSize" type="attr" />
-    <public name="autoFocus" type="attr" />
-    <public name="flash" type="attr" />
-    <public name="touchToFocus" type="attr" />
-    <public name="pinchToZoom" type="attr" />
-    <public name="awb" type="attr" />
-    <!--<public name="ae">true type="attr" /> -->
-    <public name="opticalStabilization" type="attr" />
-    <public name="noiseReduction" type="attr" />
-    <public name="shutter" type="attr" />
-    <public name="outputFormat" type="attr" />
-    <public name="jpegQuality" type="attr" />
-    <public name="zsl" type="attr" />
-    <public name="cameraMode" type="attr" />
+    <public name="cvex_facing" type="attr" />
+    <public name="cvex_aspectRatio" type="attr" />
+    <public name="cvex_continuousFrameSize" type="attr" />
+    <public name="cvex_singleCaptureSize" type="attr" />
+    <public name="cvex_autoFocus" type="attr" />
+    <public name="cvex_flash" type="attr" />
+    <public name="cvex_touchToFocus" type="attr" />
+    <public name="cvex_pinchToZoom" type="attr" />
+    <public name="cvex_awb" type="attr" />
+    <!--<public name="cvex_ae">true type="attr" /> -->
+    <public name="cvex_opticalStabilization" type="attr" />
+    <public name="cvex_noiseReduction" type="attr" />
+    <public name="cvex_shutter" type="attr" />
+    <public name="cvex_outputFormat" type="attr" />
+    <public name="cvex_jpegQuality" type="attr" />
+    <public name="cvex_zsl" type="attr" />
+    <public name="cvex_cameraMode" type="attr" />
 
     <public name="Widget.CameraView" type="style" />
 </resources>

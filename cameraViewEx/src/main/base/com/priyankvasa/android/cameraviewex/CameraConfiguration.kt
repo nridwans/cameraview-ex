@@ -69,8 +69,8 @@ class CameraConfiguration private constructor() {
 
             setAdjustViewBounds(attrs.getBoolean(R.styleable.CameraView_android_adjustViewBounds, Modes.DEFAULT_ADJUST_VIEW_BOUNDS))
 
-            facing.value = attrs.getInt(R.styleable.CameraView_facing, Modes.DEFAULT_FACING)
-            aspectRatio.value = attrs.getString(R.styleable.CameraView_aspectRatio)
+            facing.value = attrs.getInt(R.styleable.CameraView_cvex_facing, Modes.DEFAULT_FACING)
+            aspectRatio.value = attrs.getString(R.styleable.CameraView_cvex_aspectRatio)
                 .runCatching ar@{
                     if (this@ar.isNullOrBlank()) Modes.DEFAULT_ASPECT_RATIO
                     else AspectRatio.parse(this@ar)
@@ -83,15 +83,15 @@ class CameraConfiguration private constructor() {
                     )
                     Modes.DEFAULT_ASPECT_RATIO
                 }
-            autoFocus.value = attrs.getInt(R.styleable.CameraView_autoFocus, Modes.DEFAULT_AUTO_FOCUS)
-            flash.value = attrs.getInt(R.styleable.CameraView_flash, Modes.DEFAULT_FLASH)
-            cameraMode.value = attrs.getInt(R.styleable.CameraView_cameraMode, Modes.DEFAULT_CAMERA_MODE)
-            outputFormat.value = attrs.getInt(R.styleable.CameraView_outputFormat, Modes.DEFAULT_OUTPUT_FORMAT)
-            shutter.value = attrs.getInt(R.styleable.CameraView_shutter, Modes.DEFAULT_SHUTTER)
-            jpegQuality.value = attrs.getInt(R.styleable.CameraView_jpegQuality, Modes.DEFAULT_JPEG_QUALITY)
+            autoFocus.value = attrs.getInt(R.styleable.CameraView_cvex_autoFocus, Modes.DEFAULT_AUTO_FOCUS)
+            flash.value = attrs.getInt(R.styleable.CameraView_cvex_flash, Modes.DEFAULT_FLASH)
+            cameraMode.value = attrs.getInt(R.styleable.CameraView_cvex_cameraMode, Modes.DEFAULT_CAMERA_MODE)
+            outputFormat.value = attrs.getInt(R.styleable.CameraView_cvex_outputFormat, Modes.DEFAULT_OUTPUT_FORMAT)
+            shutter.value = attrs.getInt(R.styleable.CameraView_cvex_shutter, Modes.DEFAULT_SHUTTER)
+            jpegQuality.value = attrs.getInt(R.styleable.CameraView_cvex_jpegQuality, Modes.DEFAULT_JPEG_QUALITY)
 
             // API 21+
-            continuousFrameSize.value = attrs.getString(R.styleable.CameraView_continuousFrameSize)
+            continuousFrameSize.value = attrs.getString(R.styleable.CameraView_cvex_continuousFrameSize)
                 .runCatching {
                     if (this.isNullOrBlank()) Modes.DEFAULT_CONTINUOUS_FRAME_SIZE
                     else Size.parse(this)
@@ -100,7 +100,7 @@ class CameraConfiguration private constructor() {
                     warn("Cannot parse size. Fallback to default sizes based on aspect ratio.", it)
                     Modes.DEFAULT_CONTINUOUS_FRAME_SIZE
                 }
-            singleCaptureSize.value = attrs.getString(R.styleable.CameraView_singleCaptureSize)
+            singleCaptureSize.value = attrs.getString(R.styleable.CameraView_cvex_singleCaptureSize)
                 .runCatching {
                     if (this.isNullOrBlank()) Modes.DEFAULT_SINGLE_CAPTURE_SIZE
                     else Size.parse(this)
@@ -109,12 +109,12 @@ class CameraConfiguration private constructor() {
                     warn("Cannot parse size. Fallback to default sizes based on aspect ratio.", it)
                     Modes.DEFAULT_SINGLE_CAPTURE_SIZE
                 }
-            touchToFocus.value = attrs.getBoolean(R.styleable.CameraView_touchToFocus, Modes.DEFAULT_TOUCH_TO_FOCUS)
-            pinchToZoom.value = attrs.getBoolean(R.styleable.CameraView_pinchToZoom, Modes.DEFAULT_PINCH_TO_ZOOM)
-            awb.value = attrs.getInt(R.styleable.CameraView_awb, Modes.DEFAULT_AWB)
-            opticalStabilization.value = attrs.getBoolean(R.styleable.CameraView_opticalStabilization, Modes.DEFAULT_OPTICAL_STABILIZATION)
-            noiseReduction.value = attrs.getInt(R.styleable.CameraView_noiseReduction, Modes.DEFAULT_NOISE_REDUCTION)
-            zsl.value = attrs.getBoolean(R.styleable.CameraView_zsl, Modes.DEFAULT_ZSL)
+            touchToFocus.value = attrs.getBoolean(R.styleable.CameraView_cvex_touchToFocus, Modes.DEFAULT_TOUCH_TO_FOCUS)
+            pinchToZoom.value = attrs.getBoolean(R.styleable.CameraView_cvex_pinchToZoom, Modes.DEFAULT_PINCH_TO_ZOOM)
+            awb.value = attrs.getInt(R.styleable.CameraView_cvex_awb, Modes.DEFAULT_AWB)
+            opticalStabilization.value = attrs.getBoolean(R.styleable.CameraView_cvex_opticalStabilization, Modes.DEFAULT_OPTICAL_STABILIZATION)
+            noiseReduction.value = attrs.getInt(R.styleable.CameraView_cvex_noiseReduction, Modes.DEFAULT_NOISE_REDUCTION)
+            zsl.value = attrs.getBoolean(R.styleable.CameraView_cvex_zsl, Modes.DEFAULT_ZSL)
 
             attrs.recycle()
         }

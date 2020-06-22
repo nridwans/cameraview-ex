@@ -30,7 +30,7 @@ import android.support.v4.view.ViewCompat
 import android.util.AttributeSet
 import android.view.View
 import android.widget.FrameLayout
-import com.priyankvasa.android.cameraviewex.R.attr.outputFormat
+import com.priyankvasa.android.cameraviewex.R.attr.cvex_outputFormat
 import com.priyankvasa.android.cameraviewex.extension.getValue
 import com.priyankvasa.android.cameraviewex.extension.isUiThread
 import com.priyankvasa.android.cameraviewex.extension.setValue
@@ -736,7 +736,7 @@ class CameraView @JvmOverloads constructor(
     /**
      * Add a new picture taken [listener].
      * @param listener lambda with imageData of type [ByteArray] as argument
-     * which is image data of the captured image, of format set with [CameraView.outputFormat]
+     * which is image data of the captured image, of format set with [CameraView.cvex_outputFormat]
      * @return instance of [CameraView] it is called on
      */
     fun addPictureTakenListener(listener: (image: Image) -> Unit): CameraView {

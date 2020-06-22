@@ -20,7 +20,7 @@
         -->
         <attr name="android:adjustViewBounds" />
         <!-- Direction the camera faces relative to device screen. -->
-        <attr name="facing" format="enum">
+        <attr name="cvex_facing" format="enum">
             <!-- The camera device faces the opposite direction as the device's screen. -->
             <enum name="back" value="0" />
             <!-- The camera device faces the same direction as the device's screen. -->
@@ -33,13 +33,13 @@
             This also affects orientation and not just dimensions.
             For eg., 4:3 (landscape) and 3:4 (portrait) will generate differently oriented preview/output
         -->
-        <attr name="aspectRatio" format="string" />
+        <attr name="cvex_aspectRatio" format="string" />
 
         <!--
             Auto focus mode.
             See {@link android.hardware.camera2.CaptureRequest.CONTROL_AF_MODE}
         -->
-        <attr name="autoFocus" format="enum">
+        <attr name="cvex_autoFocus" format="enum">
             <enum name="off" value="0" />
             <enum name="auto" value="1" />
             <enum name="macro" value="2" />
@@ -52,13 +52,13 @@
             If true, when user touches an area on preview,
             focusing will be set to "auto" mode and the touched area will be focused.
         -->
-        <attr name="touchToFocus" format="boolean" />
+        <attr name="cvex_touchToFocus" format="boolean" />
 
         <!-- Allow adjusting digital zoom by pinching the screen in and out -->
-        <attr name="pinchToZoom" format="boolean" />
+        <attr name="cvex_pinchToZoom" format="boolean" />
 
         <!-- See {@link android.hardware.camera2.CaptureRequest.CONTROL_AWB_MODE} -->
-        <attr name="awb" format="enum">
+        <attr name="cvex_awb" format="enum">
             <enum name="off" value="0" />
             <enum name="auto" value="1" />
             <enum name="incandescent" value="2" />
@@ -71,7 +71,7 @@
         </attr>
 
         <!-- The flash mode. -->
-        <attr name="flash" format="enum">
+        <attr name="cvex_flash" format="enum">
             <!-- Flash will not be fired. -->
             <enum name="off" value="0" />
             <!--
@@ -94,10 +94,10 @@
             <enum name="redEye" value="4" />
         </attr>
 
-        <!--<attr name="ae" format="boolean" />-->
+        <!--<attr name="cvex_ae" format="boolean" />-->
 
         <!-- See {@link android.hardware.camera2.CaptureRequest.LENS_OPTICAL_STABILIZATION_MODE} -->
-        <attr name="opticalStabilization" format="boolean" />
+        <attr name="cvex_opticalStabilization" format="boolean" />
 
         <!--
             Set desired size for continuous frames. This only affects dimensions of frame, the orientation is decided by [aspectRatio].
@@ -111,7 +111,7 @@
             On setting this value, the actual preview will also be of this size but will be squeezed into {@link CameraView.aspectRatio}.
             This is due to how camera1 api does not allow setting different sizes for preview surface and output.
         -->
-        <attr name="continuousFrameSize" format="string" />
+        <attr name="cvex_continuousFrameSize" format="string" />
 
         <!--
             Set desired size for single capture images. This only affects dimensions of image, the orientation is decided by {@link CameraView.aspectRatio}.
@@ -121,13 +121,13 @@
             If it is not supported by camera device or in wrong format,
             it will silently fallback to using best size based on aspect ratio.
         -->
-        <attr name="singleCaptureSize" format="string" />
+        <attr name="cvex_singleCaptureSize" format="string" />
 
         <!--
             Noise reduction mode.
             See {@link android.hardware.camera2.CaptureRequest.NOISE_REDUCTION_MODE}
         -->
-        <attr name="noiseReduction" format="enum">
+        <attr name="cvex_noiseReduction" format="enum">
             <enum name="off" value="0" />
             <enum name="fast" value="1" />
             <enum name="high_quality" value="2" />
@@ -136,7 +136,7 @@
         </attr>
 
         <!-- Duration of shutter animation shown when capturing a single picture -->
-        <attr name="shutter" format="enum">
+        <attr name="cvex_shutter" format="enum">
             <!-- Don't show shutter -->
             <enum name="off" value="0" />
             <!-- 200 ms shutter duration -->
@@ -149,7 +149,7 @@
             Set format of the output of image data produced from the camera for {@link Modes.CameraMode.SINGLE_CAPTURE} mode.
             Supported values are {@link Modes.OutputFormat}.
          -->
-        <attr name="outputFormat" format="enum">
+        <attr name="cvex_outputFormat" format="enum">
             <enum name="jpeg" value="0" />
             <enum name="yuv_420_888" value="1" />
             <enum name="rgba_8888" value="2" />
@@ -160,7 +160,7 @@
             This property is only applicable for {@link outputFormat} {@link Modes.OutputFormat.JPEG}
             Supported values are {@link Modes.JpegQuality}.
         -->
-        <attr name="jpegQuality" format="enum">
+        <attr name="cvex_jpegQuality" format="enum">
             <enum name="low" value="60" />
             <enum name="medium" value="80" />
             <enum name="default_quality" value="90" />
@@ -171,9 +171,9 @@
             Zero shutter lag capture mode.
             See {@link android.hardware.camera2.CameraDevice.TEMPLATE_ZERO_SHUTTER_LAG}
         -->
-        <attr name="zsl" format="boolean" />
+        <attr name="cvex_zsl" format="boolean" />
 
-        <attr name="cameraMode" format="flags">
+        <attr name="cvex_cameraMode" format="flags">
             <!--
                 Capture still images.
                 Call {@link CameraView.capture} after setting this mode to capture a single picture.
